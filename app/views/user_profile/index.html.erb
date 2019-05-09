@@ -4,3 +4,7 @@
 
 
 <h2>Your Posts</h2>
+
+<% Post.all.each do |p| %>
+	<%= p.body %>
+<% end %>

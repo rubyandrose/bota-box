@@ -2,6 +2,7 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :trackable, :omniauthable, omniauth_providers: [:google_oauth2]
+  has_many :posts
 
   has_attached_file :avatar, styles: { original: ["140x140#", :png] }
   validates_attachment_content_type :avatar, :content_type => /\Aimage\//
