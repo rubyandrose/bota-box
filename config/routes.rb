@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   end
 
   root to: "hello#index"
+  get "/user_profile", to: "user_profile#index"
   get "about", to: 'about#new', as: :about
 end
