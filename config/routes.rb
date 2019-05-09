@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   end
 
   root to: "hello#index"
-  get "about", to: 'about#new', as: :about
-  get "profile", to: 'profile#show', as: :profile
 
+  get "/user_profile", to: "user_profile#index"
+  get "about", to: 'about#new', as: :about
 end

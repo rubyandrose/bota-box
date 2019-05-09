@@ -7,9 +7,10 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class='background-class'>
 
 <% if signed_in? %>
+  <%= link_to "Profile", "/user_profile" %>
   <%= link_to "Sign out", destroy_user_session_path %>
 <% end %>
 
