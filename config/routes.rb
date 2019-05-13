@@ -8,4 +8,5 @@ Rails.application.routes.draw do
 
   root to: "hello#index"
   get "about", to: 'about#new', as: :about
+  resources :posts, only: [:new, :create]
 end
