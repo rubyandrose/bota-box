@@ -1,0 +1,10 @@
+<h1>PROFILE</h1>
+
+<p><%=@user.full_name%></p>
+
+
+<h2><%=@user.full_name%>'s Posts</h2>
+
+<% Post.all.each do |p| %>
+	<%= p.body %>
+<% end %>
