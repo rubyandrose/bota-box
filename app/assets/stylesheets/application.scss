@@ -13,3 +13,19 @@ h1 {
 h2 {
 	color: #2179EE;
 }
+
+.navigation{
+  font-family: Helvetica, Arial;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+}
+
+.navigation a{
+  color: white;
+}
+
+
+.navigation .signout{
+  float:right;
+}
