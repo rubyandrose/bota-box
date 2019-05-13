@@ -10,4 +10,6 @@ Rails.application.routes.draw do
 
   get "/user_profile", to: "user_profile#index"
   get "about", to: 'about#new', as: :about
+
+  resources :users, only: :show
 end
