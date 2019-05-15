@@ -10,8 +10,12 @@
 <body class='background-class'>
 
 <% if signed_in? %>
+<div class="navigation">
+  <%= link_to "Home", "/" %>
+  <%= link_to "About", "/about" %>
   <%= link_to "Profile", "/user_profile" %>
-  <%= link_to "Sign out", destroy_user_session_path %>
+  <%= link_to "Sign out", destroy_user_session_path, class: 'signout' %>
+</div>
 <% end %>
 
 <%= yield %>
