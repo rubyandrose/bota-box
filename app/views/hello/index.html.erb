@@ -3,3 +3,7 @@
  <%= link_to "About", about_path %>
  <%= link_to "Profile", user_profile_path %>
 <%= Post.count %>
+<% current_user.posts.each do |p| %>
+  <p><%= p.body %></p>
+  <%= link_to "View Profile", user_profile_path %>
+<% end %>
