@@ -13,6 +13,13 @@ end
     params.require(:post).permit(:body)
 
   end
-
-
+  def edit
+    @ourpost = Post.find(params.fetch(:id))
+  end
+  def update
+    @ourpost = Post.find(params.fetch(:id))
+    if @ourpost.update(create_parameters)
+    redirect_to root_path
+    end
+  end
 end
